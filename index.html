@@ -1,77 +1,86 @@
 
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>space 4 u&me</title>
-	
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<style type="text/css">
 		@font-face {
 			font-family: digit;
 			src: url('digital-7_mono.ttf') format("truetype");
 		}
 	</style>
-	<link href="./default.css" type="text/css" rel="stylesheet">
-	<script type="text/javascript" src="./jquery.js"></script><style type="text/css"></style>
-	<script type="text/javascript" src="./garden.js"></script>
-    <script type="text/javascript" src="./functions.js"></script>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden_dev.js"></script>
+    <script type="text/javascript" src="js/functions_dev.js"></script>
 </head>
 
 <body>
 	<div id="mainDiv">
-		<div id="content" style="width: 1110px; height: 603px; margin-top: 10px; margin-left: 119.5px;">
+		<div id="content">
 			<div id="code">
 				<span class="comments">/**</span><br />
-				<span class="space"/><span class="comments">* 我们在人形机器人实验室相遇</span><br />
-				<span class="space"/><span class="comments">* 看到你从此我相信一见钟情</span><br />
+				<span class="space"/><span class="comments">* We have met by accident,</span><br />
+				<span class="space"/><span class="comments">* and I believe in love at first sight ever since.</span><br />
 				<span class="space"/><span class="comments">*/</span><br />
-				Boy i = <span class="keyword">new</span> Boy(<span class="string">"丸子"</span>);<br />
-				Girl u = <span class="keyword">new</span> Girl(<span class="string">"妞妞"</span>);<br />
-				<span class="comments">// 2012年10月8日，你答应和我在一起 </span><br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Ricardo.M.Jiang"</span>);<br />
+				Girl u = <span class="keyword">new</span> Girl(<span class="string">"Jane.Zhang"</span>);<br />
+				<span class="comments">// I told you I love you. </span><br />
 				i.love(u);<br />
-				<span class="comments">// 你说：“我们在一起吧”</span><br />
+				<span class="comments">// Luckily, you accepted and gave me a chance.</span><br />
 				u.accepted();<br />
-				<span class="comments">// 我每天都在思念你</span><br />
+				<span class="comments">// Since then, I miss u every day.</span><br />
 				i.miss(u);<br />
-				<span class="comments">// 我努力呵护你，不希望你受到一点伤害</span><br />
+				<span class="comments">// And take care of u and our love.</span><br />
 				i.takeCareOf(u);<br />
-				<span class="comments">// 生活不是理想，需要不断奋斗</span><br />
-				<span class="comments">// 所以我会加倍努力，永远守护在你身边</span><br />
-				<span class="keyword">boolean</span> isDiffcult = <span class="keyword">true</span>;<br />
-				<span class="keyword">while</span> (isDiffcult) {<br />
-				<span class="placeholder"/>i.fightFor(u);<br />
-				<span class="placeholder"/><span class="comments">// 为了我们的幸福</span><br />
-				<span class="placeholder"/>isDiffcult = i.overCome();<br />
+				<span class="comments">// You say that you won't be so easy to believe me.</span><br />
+				<span class="comments">// So I keep waiting and I have confidence that you will.</span><br />
+				<span class="keyword">boolean</span> notBelieve = <span class="keyword">true</span>;<br />
+				<span class="keyword">while</span> (notBelieve) {<br />
+				<span class="placeholder"/>i.waitFor(u);<br />
+				<span class="placeholder"/><span class="comments">// I think forever is the most romantic love,</span><br />
+				<span class="placeholder"/><span class="comments">// and companionship is the most soulful confession.</span><br />
+				<span class="placeholder"/>notBelieve = i.accompany(u);<br />
 				}<br />
-				<span class="comments">// 我们要有一个大房子，一个落地窗，一架大钢琴，好多好多的小动物</span><br />
+				<span class="comments">// finally you will marry me in a romantic wedding.</span><br />
 				i.marry(u);<br />
+				<span class="comments">// when we are old, we will feed some sheep,</span><br />
+				<span class="comments">// and live happily in a grassland ever after.</span><br />
 				i.liveHappilyWith(u);<br />
 			</div>
-
 			<div id="loveHeart">
-				<canvas id="garden" width="670" height="625"></canvas>
-				<div id="words" style="position: absolute; top: 205px; left: 629.5px;">
-					<div id="messages" style="display: block;">
-						We have been together for
-						<div id="elapseClock"><span class="digit">0</span> days <span class="digit">0</span> hours <span class="digit">0</span> minutes <span class="digit">0</span> seconds</div>
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						ZhangJie, I have fallen in love with you for
+						<div id="elapseClock"></div>
 					</div>
-					<div id="loveu" style="display: block;">
-						love you forever<div class="signature">:-)</div>
+					<div id="loveu">
+						Love u forever and ever.<br/>
+						<div class="signature">- Ricardo.M.Jiang</div>
 					</div>
-					
 				</div>
 			</div>
 		</div>
+		
 	</div>
 	<script type="text/javascript">
 		var offsetX = $("#loveHeart").width() / 2;
 		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var displayMode = 1;
 		var together = new Date();
-		together.setFullYear(2017, 3, 13);
-		together.setHours(22);
-		together.setMinutes(22);
-		together.setSeconds(22);
+		together.setFullYear(2017, 2, 12);
+		together.setHours(12);
+		together.setMinutes(13);
+		together.setSeconds(14);
 		together.setMilliseconds(0);
+		
+		$("#loveHeart").click(function(){
+			displayMode *= -1;
+			timeElapse(together, displayMode);
+		});
 		
 		if (!document.createElement('canvas').getContext) {
 			var msg = document.createElement("div");
@@ -88,15 +97,14 @@
 				startHeartAnimation();
 			}, 5000);
 
-			timeElapse(together);
+			timeElapse(together, displayMode);
 			setInterval(function () {
-				timeElapse(together);
+				timeElapse(together, displayMode);
 			}, 500);
 
 			adjustCodePosition();
 			$("#code").typewriter();
 		}
 	</script>
-
-
-<div><object id="ClCache" click="sendMsg" host="" width="0" height="0"></object></div></body></html>
+</body>
+</html>
